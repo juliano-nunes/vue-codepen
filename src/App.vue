@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Codepen</h1>
+    <textarea cols="100" rows="20" v-model="insecureHTML" placeholder="Escreva seu texto em html"></textarea>
+
+    <h2>Result:</h2>
+    <div v-html="insecureHTML"></div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      insecureHTML: ''
+    }
   }
 }
 </script>
